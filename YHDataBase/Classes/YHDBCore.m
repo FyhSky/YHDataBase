@@ -8,7 +8,7 @@
 #import "YHDBCore.h"
 #import "FMDB.h"
 #import "YHDBCoreInterface.h"
-#import "YYKit.h"
+#import "YYModel.h"
 @interface YHDBCore () {
     BOOL _isExist;
 }
@@ -312,10 +312,10 @@
                         value = [ self base64Str:value];
                     }
                 } else if ([property_sign isEqualToString:@"@\"NSDictionary\""]) {
-                    value =  [((NSDictionary *)value) modelToJSONString];
+                    value =  [((NSDictionary *)value) yy_modelToJSONString];
                     value = [ self base64Str:value];
                 } else if ([property_sign isEqualToString:@"@\"NSArray\""]) {
-                    value =  [((NSDictionary *)value) modelToJSONString];
+                    value =  [((NSDictionary *)value) yy_modelToJSONString];
                     NSArray *array = value;
                     NSMutableString *str = [NSMutableString new];
                     [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
