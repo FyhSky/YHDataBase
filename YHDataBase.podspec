@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YHDataBase'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = '提供对象属性与数据库存储之间的关系映射功能，方便集成'
 
 # This description is used to generate tags and improve search results.
