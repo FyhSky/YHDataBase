@@ -10,8 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "YHDataObjectProtocol.h"
 #import "YHDataBaseUtils.h"
-//#import "MTLFMDBAdapter.h"
-#import <MTLFMDBAdapter/MTLFMDBAdapter.h>
+#import "MTLFMDBAdapter.h"
 @class FMDatabaseQueue,FMDatabase;
 @interface YHDBCore ()
 @property (nonatomic, strong, readonly) FMDatabase * dataBase;

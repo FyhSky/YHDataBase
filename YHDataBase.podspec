@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YHDataBase'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = '提供对象属性与数据库存储之间的关系映射功能，方便集成'
 
 # This description is used to generate tags and improve search results.
@@ -39,6 +39,7 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'MTLFMDBAdapter'
   s.dependency 'YYKit'
+  s.dependency 'Mantle','~> 2.1.6'
+  s.dependency 'FMDB','~> 2.7.5'
 end
