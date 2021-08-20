@@ -19,7 +19,7 @@
 @required
 /**
  获取属性列表
- @breif: 如果使用GDATABASE_IMPLEMENTATION_INJECT 宏.宏内已经实现.无需添加
+ @breif: 如果使用YHDATABASE_IMPLEMENTATION_INJECT 宏.宏内已经实现.无需添加
  @return 属性列表
  */
 - (NSArray*)yh_getAllProperty;
@@ -28,7 +28,7 @@
 
 /**
  自定义主键方法
- @breif: 如果使用GDATABASE_IMPLEMENTATION_INJECT 宏. 宏内已经实现.无需添加
+ @breif: 如果使用YHDATABASE_IMPLEMENTATION_INJECT 宏. 宏内已经实现.无需添加
  如果返回多个字段.会默认创建多主键表.返回一个字段会创建单主键表
  @default: 默认创建表的方式为自增主键'GAUTOPRIMARYKEY',
  @return 自定义主键列表
@@ -37,9 +37,9 @@
 
 /**
  黑名单
- @breif: 如果模型中部分属性,无需存入数据库,在使用GDATABASE_IMPLEMENTATION_INJECT宏的情况下
+ @breif: 如果模型中部分属性,无需存入数据库,在使用YHDATABASE_IMPLEMENTATION_INJECT宏的情况下
  实现<+yh_blackList>类方法,key为需要忽略的属性名.value可随意填写.
- 如果没有使用GDATABASE_IMPLEMENTATION_INJECT宏. 可以在<-yh_getAllProperty>方法中过滤相关属性.
+ 如果没有使用YHDATABASE_IMPLEMENTATION_INJECT宏. 可以在<-yh_getAllProperty>方法中过滤相关属性.
  @return 黑名单列表
  */
 - (NSDictionary<NSString *,NSString*> *)yh_blackList;
@@ -53,7 +53,7 @@
 + (NSDictionary<NSString *,NSString*> *)yh_customArchiveList;
 
 /**
- 在使用GDATABASE_IMPLEMENTATION_INJECT宏的情况下, 模型类中如需实现
+ 在使用YHDATABASE_IMPLEMENTATION_INJECT宏的情况下, 模型类中如需实现
  setValue:(id)value forUndefinedKey:(NSString *)key
  方法,请使用该方法.
  @param value <#value description#>
@@ -62,7 +62,7 @@
 - (void)yh_setValue:(id)value forUndefinedKey:(NSString *)key;
 
 /**
- 在使用GDATABASE_IMPLEMENTATION_INJECT宏的情况下, 模型类中如需额外初始化
+ 在使用YHDATABASE_IMPLEMENTATION_INJECT宏的情况下, 模型类中如需额外初始化
  请实现'yh_init'. 或者自定义其他构造方法.调用 '[super init]'
  */
 - (void)yh_init;
@@ -85,7 +85,7 @@
 
 /**
  获取当前模型自增主键,模型对外使用.
- @breif:GDATABASE_IMPLEMENTATION_INJECT宏中已经实现
+ @breif:YHDATABASE_IMPLEMENTATION_INJECT宏中已经实现
  
  @return 自增主键
  */
@@ -112,7 +112,7 @@
  @param clazz
  @return
  */
-#define GDATABASE_IMPLEMENTATION_INJECT(clazz) {\
+#define YHDATABASE_IMPLEMENTATION_INJECT(clazz) {\
 NSMutableArray *_yh_properties;\
 long    _GAUTOPRIMARYKEY;\
 }\
